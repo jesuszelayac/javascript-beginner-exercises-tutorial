@@ -1,11 +1,13 @@
 function getColor(selection)
 {
-	switch(selection){
-		// Add more options here
-	    default:
-	    	return false;  //returns false because the user picked an unavailable color
-	    break;               
-	}
+	switch(selection.toLowerCase()) { // Convert to lowercase to make the function case-insensitive
+        case 'red':
+        case 'green':
+        case 'blue':
+            return true;
+        default:
+            return false; // Returns false because the user picked an unavailable color
+    }
 }
 
 let colorname = prompt('What color do you want?').trim();
